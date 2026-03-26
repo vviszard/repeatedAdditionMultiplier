@@ -12,8 +12,6 @@ This design uses the "Repeated Addition" algorithm. To multiply A×B, the hardwa
 
 - FSM Control: A 5-state controller manages the timing and data flow.
 
-- Resource Optimized: Uses basic logic gates and flip-flops, making it ideal for low-power FPGA implementation.
-
 ### Architecture
 
 The system is divided into two primary sections:
