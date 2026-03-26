@@ -1,6 +1,6 @@
 # 16-Bit Repeated Addition Multiplier
 
-A hardware-efficient digital multiplier implemented in Verilog, following the Data Path and Control Path architectural partitioning. Developed and verified using Xilinx Vivado on AlmaLinux.
+A digital multiplier implemented in Verilog, following the Data Path and Control Path architectural partitioning. Developed and verified using Xilinx Vivado on AlmaLinux.
 
 ## Project Overview
 
