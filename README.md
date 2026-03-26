@@ -17,6 +17,7 @@ This design uses the "Repeated Addition" algorithm. To multiply A×B, the hardwa
 ### Architecture
 
 The system is divided into two primary sections:
+
 **1. Data Path**
 
 Contains the functional units where the actual computation happens.
