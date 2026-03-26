@@ -1,7 +1,8 @@
 # 16-Bit Repeated Addition Multiplier
 
 A hardware-efficient digital multiplier implemented in Verilog, following the Data Path and Control Path architectural partitioning. Developed and verified using Xilinx Vivado on AlmaLinux.
-Project Overview
+
+### Project Overview
 
 This design uses the "Repeated Addition" algorithm. To multiply A×B, the hardware adds A to a partial product B times. This approach mimics a Finite State Machine (FSM) controlling arithmetic hardware, demonstrating a fundamental concept in RTL (Register Transfer Level) design.
 
