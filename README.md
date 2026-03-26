@@ -32,7 +32,7 @@ Contains the functional units where the actual computation happens.
 
 **2. Control Path**
 
-A Finite State Machine that issues control signals (LdA, LdB, LdP, decB, clrP) based on the current state:
+A Finite State Machine that issues control signals (ldA, ldB, ldP, decB, clrP) based on the current state:
 
     S0 (Idle): Waits for the start signal.
 
