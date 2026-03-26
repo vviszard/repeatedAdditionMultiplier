@@ -48,7 +48,7 @@ A Finite State Machine that issues control signals (ldA, ldB, ldP, decB, clrP) b
 
 The design implements a Synchronous RTL flow. The Controller (FSM) acts as the master, generating enable signals for the registers in the Data Path.
 
-- The Loop: In state S3, the LdP (Load Product) and decB (Decrement B) signals are asserted simultaneously. This ensures that for every clock cycle, an addition is performed and the counter is updated, maintaining a precise O(n) time complexity relative to the multiplier value.
+- The Loop: In state S3, the LdP (Load Product) and decB (Decrement B) signals are asserted simultaneously. This ensures that for every clock cycle, an addition is performed and the counter is updated.
 
 **Simulation & Reports**
 
