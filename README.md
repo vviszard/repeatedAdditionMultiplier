@@ -1,34 +1,34 @@
-16-Bit Repeated Addition Multiplier
+# 16-Bit Repeated Addition Multiplier
 
 A hardware-efficient digital multiplier implemented in Verilog, following the Data Path and Control Path architectural partitioning. Developed and verified using Xilinx Vivado on AlmaLinux.
 Project Overview
 
 This design uses the "Repeated Addition" algorithm. To multiply A×B, the hardware adds A to a partial product B times. This approach mimics a Finite State Machine (FSM) controlling arithmetic hardware, demonstrating a fundamental concept in RTL (Register Transfer Level) design.
 
-Key Features:
+## Key Features:
 
-    Modular Design: Separate modules for registers (PIPO), counters, adders, and comparators.
+- Modular Design: Separate modules for registers (PIPO), counters, adders, and comparators.
 
-    FSM Control: A 5-state controller manages the timing and data flow.
+- FSM Control: A 5-state controller manages the timing and data flow.
 
-    Resource Optimized: Uses basic logic gates and flip-flops, making it ideal for low-power FPGA implementation.
+- Resource Optimized: Uses basic logic gates and flip-flops, making it ideal for low-power FPGA implementation.
 
-Architecture
+## Architecture
 
 The system is divided into two primary sections:
 1. Data Path
 
 Contains the functional units where the actual computation happens.
 
-    Register A: Stores the Multiplicand.
+- Register A: Stores the Multiplicand.
 
-    Register P: The Accumulator for the partial product.
+- Register P: The Accumulator for the partial product.
 
-    Counter B: Stores the Multiplier and decrements after every addition.
+- Counter B: Stores the Multiplier and decrements after every addition.
 
-    Adder: Computes P+A.
+- Adder: Computes P+A.
 
-    Comparator: Checks the eqz (Equal to Zero) condition for Counter B.
+- Comparator: Checks the eqz (Equal to Zero) condition for Counter B.
 
 2. Control Path
 
@@ -44,10 +44,10 @@ A Finite State Machine that issues control signals (LdA, LdB, LdP, decB, clrP) b
 
     S4: Sets the done flag and holds the final result.
 
-Theory of Operation
+## Theory of Operation
 The design implements a Synchronous RTL flow. The Controller (FSM) acts as the master, generating enable signals for the registers in the Data Path.
 
-    The Loop: In state S3, the LdP (Load Product) and decB (Decrement B) signals are asserted simultaneously. This ensures that for every clock cycle, an addition is performed and the counter is updated, maintaining a precise O(n) time complexity relative to the multiplier value.
+- The Loop: In state S3, the LdP (Load Product) and decB (Decrement B) signals are asserted simultaneously. This ensures that for every clock cycle, an addition is performed and the counter is updated, maintaining a precise O(n) time complexity relative to the multiplier value.
 
 Simulation & Reports
 
