@@ -34,7 +34,7 @@ Contains the functional units where the actual computation happens.
 
 A Finite State Machine that issues control signals (LdA, LdB, LdP, decB, clrP) based on the current state:
 
-    S0 (Idle): Waits for the start signal.
+* S0 (Idle): Waits for the start signal.
 
     S1: Loads Multiplicand A.
 
